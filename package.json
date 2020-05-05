@@ -1,0 +1,48 @@
+{
+    "name": "arcaea-theme",
+    "displayName": "Arcaea Theme",
+    "description": "Arcaea theme for VS Code.",
+    "version": "0.0.1",
+	"publisher": "ayatough",
+	"author": {
+		"name": "ayatough",
+		"email": "modest.simple.life@gmail.com"
+	},
+	"keywords": [
+		"arcaea", "light", "dark"
+	],
+	"homepage": "https://github.com/ayatough/vscode-arcaea-theme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ayatough/vscode-arcaea-theme"
+	},
+	"bugs": {
+		"url": "https://github.com/ayatough/vscode-arcaea-theme/issues"
+	},
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Arcaea (Hikari)",
+                "uiTheme": "vs",
+                "path": "./themes/arcaea-hikari-color-theme.json"
+            },
+            {
+                "label": "Arcaea (Tairitsu)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/arcaea-tairitsu-color-theme.json"
+            }
+        ]
+    },
+    "scripts": {
+        "build": "node ./script/build.js"
+    },
+    "dependencies": {
+        "js-yaml": "^3.13.1"
+    }
+}

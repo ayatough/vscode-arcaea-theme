@@ -1,0 +1,559 @@
+name: Arcaea
+type: dark
+author: ayatough
+arcaea:
+  base:  # color definition
+
+    - &MAIN "#BDBCDB"
+    - &BASE "#1C1C1C"
+    - &ACCENT "#65B8DC"
+
+    - &SUBBASE "#2E222F"
+    - &ACCENTBASE "#402942"
+
+    - &SUBACCENT "#78547B"
+
+    - &BORDER "#665C76"
+
+    - &CODEACCENT1 "#BE54A7" # right
+    - &CODEACCENT2 "#4F9DC4" # left
+    - &CODEACCENT3 "#A57EB3" # sky
+    - &CODEACCENT4 "#70C184"
+    - &CODEACCENT5 "#D6D65B"
+
+    # L=60
+    - &CYAN "#70C1C1"
+    - &MAGENTA "#AD70C1"
+    - &YELLOW "#D6D65B"
+    - &BLACK "#1F1F1F"
+    - &RED "#CC7F65"
+    - &GREEN "#70C184"
+    - &BLUE "#7099C1"
+    - &WHITE "#F1F1F1"
+
+    # debug
+    - &r "#ff0000"
+    - &g "#00ff00"
+    - &b "#0000ff"
+
+colors:
+  focusBorder: !alpha [*BORDER, "00"]
+  foreground: *MAIN
+  activityBar.background: *SUBBASE
+  activityBar.dropBackground: *SUBBASE
+  activityBar.foreground: *MAIN
+  activityBarBadge.background: *ACCENT
+  activityBarBadge.foreground: *BASE
+  badge.foreground: *BASE
+  badge.background: *ACCENT
+  button.background: *MAIN
+  button.foreground: *BASE
+  button.hoverBackground: !alpha [*MAIN, "CC"]
+  debugExceptionWidget.background: *ACCENTBASE
+  debugExceptionWidget.border: !alpha [*BORDER, "33"]
+  debugToolBar.background: *SUBBASE
+  descriptionForeground: !alpha [*MAIN, "E6"]
+  diffEditor.insertedTextBackground: !alpha [*GREEN, "66"]
+  diffEditor.removedTextBackground: !alpha [*RED, "66"]
+  dropdown.background: *SUBBASE
+  dropdown.border: *SUBBASE
+  dropdown.foreground: *MAIN
+  editorCursor.foreground: *MAIN
+  editorHint.border: !alpha [*YELLOW, "00"]
+  editorHint.foreground: *YELLOW
+  editorIndentGuide.background: !alpha [*BORDER, "33"]
+  editorIndentGuide.activeBackground: !alpha [*BORDER, "66"]
+  editorLineNumber.foreground: *ACCENTBASE
+  editorLineNumber.activeForeground: *ACCENTBASE
+  editorWhitespace.foreground: !alpha [*ACCENTBASE, "B3"]
+  editorWidget.background: *BASE
+  editorWidget.border: !alpha [*BORDER, "11"]
+  editor.background: *BASE
+  editor.foreground: *MAIN
+  editor.hoverHighlightBackground: *ACCENTBASE
+  editor.findMatchBackground: !alpha [*ACCENT, "66"]
+  editor.findMatchHighlightBackground: !alpha [*ACCENT, "33"]
+  editor.findRangeHighlightBackground: !alpha [*ACCENT, "33"]
+  editor.lineHighlightBackground: !alpha [*SUBBASE, "99"]
+  editor.lineHighlightBorder: !alpha [*SUBBASE, "00"]
+  editor.inactiveSelectionBackground: !alpha [*MAIN, "22"]
+  editor.selectionBackground: !alpha [*MAIN, "33"]
+  editor.selectionHighlightBackground: !alpha [*MAIN, "22"]
+  editor.rangeHighlightBackground: !alpha [*ACCENT, "66"]
+  editor.wordHighlightBackground: !alpha [*MAIN, "33"]
+  editor.wordHighlightStrongBackground: !alpha [*MAIN, "66"]
+  editorError.foreground: *RED
+  editorError.border: !alpha [*RED, "00"]
+  editorWarning.foreground: *YELLOW
+  editorWarning.border: !alpha [*YELLOW, "00"]
+  editorBracketMatch.background: !alpha [*BASE, "00"]
+  editorBracketMatch.border: *ACCENT
+  editorCodeLens.foreground: *ACCENTBASE
+  editorGroup.emptyBackground: *BASE
+  editorGroup.border: !alpha [*BORDER, "33"]
+  editorGroup.dropBackground: !alpha [*MAIN, "22"]
+  editorGroupHeader.noTabsBackground: *BASE
+  editorGroupHeader.tabsBackground: *BASE
+  editorGroupHeader.tabsBorder: !alpha [*BORDER, "00"]
+  editorGutter.background: *BASE
+  editorGutter.modifiedBackground: *YELLOW
+  editorGutter.addedBackground: *GREEN
+  editorGutter.deletedBackground: *RED
+  editorHoverWidget.background: *SUBBASE
+  editorHoverWidget.border: !alpha [*BORDER, "33"]
+  editorLink.activeForeground: *ACCENT
+  editorMarkerNavigation.background: !alpha [*SUBACCENT, "C0"]
+  editorMarkerNavigationError.background: !alpha [*RED, "33"]
+  editorMarkerNavigationWarning.background: !alpha [*YELLOW, "33"]
+  editorOverviewRuler.border: !alpha [*BORDER, "33"]
+  editorOverviewRuler.currentContentForeground: *SUBBASE
+  editorOverviewRuler.incomingContentForeground: *SUBBASE
+  editorOverviewRuler.findMatchForeground: !alpha [*ACCENT, "66"]
+  editorOverviewRuler.rangeHighlightForeground: !alpha [*ACCENT, "33"]
+  editorOverviewRuler.selectionHighlightForeground: !alpha [*ACCENT, "33"]
+  editorOverviewRuler.wordHighlightForeground: !alpha [*ACCENT, "66"]
+  editorOverviewRuler.wordHighlightStrongForeground: !alpha [*ACCENT, "66"]
+  editorOverviewRuler.modifiedForeground: *YELLOW
+  editorOverviewRuler.addedForeground: *GREEN
+  editorOverviewRuler.deletedForeground: *RED
+  editorOverviewRuler.errorForeground: *RED
+  editorOverviewRuler.warningForeground: *YELLOW
+  editorOverviewRuler.infoForeground: *GREEN
+  editorRuler.foreground: *ACCENTBASE
+  editorSuggestWidget.background: *BASE
+  editorSuggestWidget.border: *SUBBASE
+  editorSuggestWidget.foreground: *MAIN
+  editorSuggestWidget.highlightForeground: *ACCENT
+  editorSuggestWidget.selectedBackground: *ACCENTBASE
+  editor.stackFrameHighlightBackground: !alpha [*YELLOW, "99"]
+  editor.focusedStackFrameHighlightBackground: *ACCENTBASE
+  extensionButton.prominentForeground: *BASE
+  extensionButton.prominentBackground: *MAIN
+  extensionButton.prominentHoverBackground: !alpha [*ACCENTBASE, "99"]
+  errorForeground: *RED
+  gitDecoration.modifiedResourceForeground: *YELLOW
+  gitDecoration.deletedResourceForeground: *RED
+  gitDecoration.untrackedResourceForeground: *GREEN
+  gitDecoration.ignoredResourceForeground: !alpha [*MAIN, "66"]
+  gitDecoration.conflictingResourceForeground: *SUBACCENT
+  gitDecoration.submoduleResourceForeground: *CYAN
+  input.background: *SUBBASE
+  input.foreground: *MAIN
+  input.placeholderForeground: !alpha [*MAIN, "99"]
+  input.border: !alpha [*SUBBASE, "00"]
+  inputOption.activeBackground: !alpha [*ACCENT, "66"]
+  inputOption.activeBorder: !alpha [*ACCENT, "00"]
+  inputValidation.errorBackground: *RED
+  inputValidation.errorForeground: *WHITE
+  inputValidation.errorBorder: *RED
+  inputValidation.infoBackground: *GREEN
+  inputValidation.infoForeground: *WHITE
+  inputValidation.infoBorder: *GREEN
+  inputValidation.warningBackground: *YELLOW
+  inputValidation.warningForeground: *WHITE
+  inputValidation.warningBorder: *YELLOW
+  list.activeSelectionBackground: *ACCENT
+  list.activeSelectionForeground: *BASE
+  list.inactiveSelectionBackground: !alpha [*ACCENTBASE, "99"]
+  list.inactiveSelectionForeground: *MAIN
+  list.inactiveFocusBackground: !alpha [*ACCENTBASE, "66"]
+  list.hoverForeground: *MAIN
+  list.focusForeground: *MAIN
+  list.focusBackground: !alpha [*ACCENT, "66"]
+  list.hoverBackground: *SUBBASE
+  list.dropBackground: !alpha [*ACCENT, "66"]
+  list.highlightForeground: *ACCENT
+  list.errorForeground: *RED
+  list.warningForeground: *YELLOW
+  merge.currentHeaderBackground: !alpha [*GREEN, "66"]
+  merge.currentContentBackground: !alpha [*GREEN, "4D"]
+  merge.incomingHeaderBackground: !alpha [*CYAN, "66"]
+  merge.incomingContentBackground: !alpha [*CYAN, "4D"]
+  merge.border: !alpha [*ACCENTBASE, "00"]
+  minimap.findMatchHighlight: *ACCENT
+  minimap.selectionHighlight: !alpha [*MAIN, "99"]
+  minimap.errorHighlight: !alpha [*RED, "99"]
+  minimap.warningHighlight: !alpha [*YELLOW, "99"]
+  minimap.background: *BASE
+  minimapSlider.background: !alpha [*ACCENTBASE, "66"]
+  minimapSlider.hoverBackground: !alpha [*ACCENTBASE, "99"]
+  minimapSlider.activeBackground: !alpha [*ACCENTBASE, "99"]
+  # minimapGutter.addedBackground:
+  # minimapGutter.modifiedBackground:
+  # minimapGutter.deletedBackground:
+
+  notificationCenter.border: !alpha [*BORDER, "33"]
+  notificationCenterHeader.background: *ACCENTBASE
+  notificationCenterHeader.foreground: *ACCENT
+  notificationLink.foreground: *ACCENT
+  notifications.background: *SUBBASE
+  notifications.border: *BASE
+  notifications.foreground: *MAIN
+  notificationToast.border: !alpha [*ACCENTBASE, "00"]
+
+  panel.background: *BASE
+  panel.border: !alpha [*BORDER, "33"]
+  panelTitle.activeBorder: !alpha [*ACCENT, "00"]
+  panelTitle.activeForeground: *ACCENT
+  panelTitle.inactiveForeground: *MAIN
+  peekView.border: *ACCENTBASE
+  peekViewEditor.background: *BASE
+  peekViewEditorGutter.background: *BASE
+  peekViewEditor.matchHighlightBackground: !alpha [*ACCENT, "4D"]
+  peekViewResult.background: *BASE
+  peekViewResult.fileForeground: *ACCENT
+  peekViewResult.lineForeground: !alpha [*MAIN, "66"]
+  peekViewResult.matchHighlightBackground: !alpha [*ACCENT, "CC"]
+  peekViewResult.selectionBackground: *ACCENTBASE
+  peekViewResult.selectionForeground: *MAIN
+  peekViewTitle.background: *SUBBASE
+  peekViewTitleDescription.foreground: *MAIN
+  peekViewTitleLabel.foreground: *ACCENT
+  pickerGroup.border: *SUBBASE
+  pickerGroup.foreground: *ACCENT
+  progressBar.background: *ACCENT
+  scrollbar.shadow: !alpha [*BASE, "66"]
+  scrollbarSlider.activeBackground: !alpha [*MAIN, "66"]
+  scrollbarSlider.background: !alpha [*MAIN, "33"]
+  scrollbarSlider.hoverBackground: !alpha [*MAIN, "66"]
+  selection.background: !alpha [*ACCENT, "66"]
+  sideBar.background: *BASE
+  sideBar.foreground: *MAIN
+  sideBar.border: !alpha [*BORDER, 33]
+  sideBarSectionHeader.background: *ACCENTBASE
+  sideBarSectionHeader.foreground: *MAIN
+  sideBarTitle.foreground: *MAIN
+  statusBar.background: *SUBBASE
+  statusBar.debuggingBackground: *SUBACCENT
+  statusBar.debuggingForeground: *BASE
+  statusBar.noFolderForeground: *MAIN
+  statusBar.noFolderBackground: *SUBBASE
+  statusBar.foreground: *MAIN
+  statusBarItem.activeBackground: !alpha [*ACCENT, "66"]
+  statusBarItem.hoverBackground: !alpha [*ACCENTBASE, "99"]
+  statusBarItem.prominentBackground: *ACCENTBASE
+  statusBarItem.prominentHoverBackground: *ACCENTBASE
+  statusBar.border: !alpha [*ACCENTBASE, "00"]
+  tab.activeBackground: !alpha [*ACCENTBASE, "CC"]
+  tab.activeForeground: *MAIN
+  tab.border: !alpha [*ACCENTBASE, "00"]
+  tab.activeBorder: !alpha [*ACCENT, "FF"]
+  tab.unfocusedActiveBorder: !alpha [*ACCENT, "00"]
+  tab.inactiveBackground: *BASE
+  tab.inactiveForeground: !alpha [*MAIN, "99"]
+  tab.unfocusedActiveForeground: !alpha [*MAIN, "99"]
+  tab.unfocusedInactiveForeground: !alpha [*MAIN, "66"]
+  tab.unfocusedActiveBackground: !alpha [*ACCENTBASE, "CC"]
+  tab.hoverBackground: !alpha [*ACCENTBASE, "CC"]
+  tab.unfocusedHoverBackground: !alpha [*ACCENTBASE, "B3"]
+  tab.hoverBorder: !alpha [*ACCENT, "00"]
+  tab.unfocusedHoverBorder: !alpha [*ACCENT, "00"]
+  tab.activeBorderTop: !alpha [*ACCENT, "00"]
+  tab.unfocusedActiveBorderTop: !alpha [*ACCENT, "00"]
+  terminal.background: *BASE
+  terminal.foreground: *MAIN
+  terminal.ansiBlack: *BLACK
+  terminal.ansiRed: *RED
+  terminal.ansiGreen: *GREEN
+  terminal.ansiYellow: *YELLOW
+  terminal.ansiBlue: *BLUE
+  terminal.ansiMagenta: *MAGENTA
+  terminal.ansiCyan: *CYAN
+  terminal.ansiWhite: *WHITE
+  terminal.ansiBrightBlack: *BLACK
+  terminal.ansiBrightRed: *RED
+  terminal.ansiBrightGreen: *GREEN
+  terminal.ansiBrightYellow: *YELLOW
+  terminal.ansiBrightBlue: *BLUE
+  terminal.ansiBrightMagenta: *MAGENTA
+  terminal.ansiBrightCyan: *CYAN
+  terminal.ansiBrightWhite: *WHITE
+  textBlockQuote.background: !alpha [*MAIN, "22"]
+  textBlockQuote.border: !alpha [*MAIN, "22"]
+  textCodeBlock.background: *ACCENT
+  textLink.activeForeground: *ACCENT
+  textLink.foreground: *ACCENT
+  textPreformat.foreground: !alpha [*ACCENT, "99"]
+  textSeparator.foreground: *MAIN
+  titleBar.activeBackground: *SUBBASE
+  titleBar.activeForeground: *MAIN
+  titleBar.border: !alpha [*BASE, "00"]
+  titleBar.inactiveBackground: *SUBBASE
+  titleBar.inactiveForeground: !alpha [*MAIN, "66"]
+  tree.indentGuidesStroke: *MAIN
+  walkThrough.embeddedEditorBackground: *BASE
+  
+  welcomePage.buttonBackground: *ACCENTBASE
+  welcomePage.buttonHoverBackground: !alpha [*ACCENTBASE, "99"]
+  widget.shadow: !alpha [*BASE, "66"]
+# Syntaxes
+tokenColors:
+  - name: Comments
+    scope:
+    - comment
+    - punctuation.definition.comment
+    settings:
+      fontStyle: italic
+      foreground: !alpha [*MAIN, "66"]
+
+  - name: Comments Preprocessor
+    scope: comment.block.preprocessor
+    settings:
+      foreground: !alpha [*MAIN, "66"]
+
+  - name: Comments Documentation
+    scope:
+    - comment.documentation
+    - comment.block.documentation
+    settings:
+      foreground: *CODEACCENT4
+
+  - name: Invalid - Illegal
+    scope: invalid.illegal
+    settings:
+      foreground: *RED
+
+  - name: Operators
+    scope: keyword.operator
+    settings:
+      foreground: *MAIN
+
+  - name: Keywords
+    scope:
+    - keyword
+    - storage
+    - keyword.operator
+    settings:
+      foreground: *CODEACCENT1
+
+  - name: Types
+    scope:
+    - storage.type
+    - support.type
+    settings:
+      foreground: *CODEACCENT1
+
+  - name: Language Constants
+    scope:
+    - constant.language
+    - support.constant
+    - variable.language
+    settings:
+      foreground: *CODEACCENT3
+
+  - name: Variables
+    scope:
+    - variable
+    - support.variable
+    settings:
+      foreground: *MAIN
+
+  - name: Functions
+    scope:
+    - entity.name.function
+    - support.function
+    settings:
+      foreground: *CODEACCENT2
+
+  - name: Classes
+    scope:
+    - entity.name.type
+    - entity.other.inherited-class
+    - support.class
+    settings:
+      foreground: *CODEACCENT2
+
+  - name: Exceptions
+    scope: entity.name.exception
+    settings:
+      foreground: *RED
+
+  - name: Sections
+    scope: entity.name.section
+    settings:
+      fontStyle: bold
+      foreground: *CODEACCENT1
+
+  - name: Numbers Characters
+    scope:
+    - constant.numeric
+    # - constant
+    settings:
+      foreground: *CODEACCENT3
+
+  - name: Strings
+    scope: string
+    settings:
+      foreground: *CODEACCENT2
+
+  - name: Strings Escape Sequences
+    scope:
+    - constant.character.escape
+    - constant.character
+    settings:
+      foreground: *CODEACCENT5
+
+  - name: Strings Regular Expressions
+    scope: string.regexp
+    settings:
+      foreground: *CODEACCENT5
+
+  - name: Strings Symbols
+    scope: constant.other.symbol
+    settings:
+      foreground: *MAIN
+
+  - name: Punctuation
+    scope: punctuation
+    settings:
+      foreground: *MAIN
+
+  - name: HTML Doctype Declaration
+    scope:
+    - meta.tag.sgml.doctype
+    - meta.tag.sgml.doctype string
+    - meta.tag.sgml.doctype entity.name.tag
+    - meta.tag.sgml punctuation.definition.tag.html
+    settings:
+      foreground: *CODEACCENT2
+
+  - name: HTML Tags
+    scope:
+    - meta.tag
+    - punctuation.definition.tag.html
+    - punctuation.definition.tag.begin.html
+    - punctuation.definition.tag.end.html
+    settings:
+      foreground: *MAIN
+
+  - name: HTML Tag Names
+    scope: entity.name.tag
+    settings:
+      foreground: *CODEACCENT1
+
+  - name: HTML Attribute Names
+    scope:
+    - meta.tag entity.other.attribute-name
+    - entity.other.attribute-name.html
+    settings:
+      fontStyle: italic
+      foreground: *CODEACCENT3
+
+  - name: HTML Entities
+    scope:
+    - constant.character.entity
+    - punctuation.definition.entity
+    settings:
+      foreground: *MAIN
+
+  - name: CSS Selectors
+    scope:
+    - entity.name.tag.css
+    - meta.property-value
+    - meta.property-value constant.other
+    - support.constant.property-value
+    settings:
+      foreground: *CODEACCENT1
+
+  - name: CSS Property Names
+    scope:
+    - meta.property-name
+    - support.type.property-name
+    settings:
+      foreground: *MAIN
+
+  - name: CSS Property Values
+    scope:
+    - meta.selector
+    - meta.selector entity
+    - meta.selector entity punctuation
+    settings:
+      foreground: *CODEACCENT2
+
+  - name: Markup Changed
+    scope: markup.changed
+    settings:
+      foreground: *YELLOW
+
+  - name: Markup Deletion
+    scope: markup.deleted
+    settings:
+      foreground: *RED
+
+  - name: Markup Emphasis
+    scope: markup.italic
+    settings:
+      fontStyle: italic
+
+  - name: Markup Error
+    scope: markup.error
+    settings:
+      foreground: *RED
+
+  - name: Markup Insertion
+    scope: markup.inserted
+    settings:
+      foreground: *GREEN
+
+  - name: Markup Link
+    scope: meta.link
+    settings:
+      foreground: *CODEACCENT2
+
+  - name: Markup Heading
+    scope: markup.heading
+    settings:
+      foreground: *CODEACCENT1
+
+  - name: Markup Strong
+    scope: markup.bold
+    settings:
+      fontStyle: bold
+
+  - name: Markup Underline
+    scope: markup.underline
+    settings:
+      fontStyle: underline
+
+  - name: Markup Quote
+    scope: markup.quote
+    settings:
+      foreground: *CODEACCENT3
+
+  - name: Markup Lists
+    scope: markup.list
+    settings:
+      foreground: *MAIN
+
+  - name: Markup Styling
+    scope:
+      markup.bold
+      markup.italic
+    settings:
+      foreground: *MAIN
+
+  - name: Markup Inline
+    scope:
+    - markup.inline.raw
+    - markup.fenced_code.block
+    settings:
+      foreground: *CODEACCENT3
+
+  - name: Extra Diff Range
+    scope:
+      meta.diff.range
+      meta.diff.index
+      meta.separator
+    settings:
+      foreground: *GREEN
+
+  - name: Extra Diff From
+    scope: meta.diff.header.from-file
+    settings:
+      foreground: *GREEN
+
+  - name: Extra Diff To
+    scope: meta.diff.header.to-file
+    settings:
+      foreground: *CODEACCENT2
+  
