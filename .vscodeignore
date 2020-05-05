@@ -4,3 +4,10 @@ vsc-extension-quickstart.md
 
 script/**
 src/**
+**/tsconfig.json
+**/.eslintrc.json
+**/*.map
+**/*.ts
+
+image/**
+node_modules/**
