@@ -24,7 +24,7 @@ arcaea:
     # L=60
     - &CYAN "#70C1C1"
     - &MAGENTA "#AD70C1"
-    - &YELLOW "#D6D65B"
+    - &YELLOW "#CCCC4F"
     - &BLACK "#1F1F1F"
     - &RED "#CC7F65"
     - &GREEN "#70C184"
