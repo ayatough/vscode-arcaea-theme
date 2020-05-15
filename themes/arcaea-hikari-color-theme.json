@@ -271,8 +271,7 @@
     "tree.indentGuidesStroke": "#78547B",
     "walkThrough.embeddedEditorBackground": "#F1F1F1",
     "welcomePage.buttonBackground": "#D4CED2",
-    "welcomePage.buttonHoverBackground": "#D4CED299",
-    "widget.shadow": "#F1F1F166"
+    "welcomePage.buttonHoverBackground": "#D4CED299"
   },
   "tokenColors": [
     {
