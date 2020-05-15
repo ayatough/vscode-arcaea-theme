@@ -9,7 +9,7 @@ arcaea:
     - &ACCENT "#C74A97"
 
     - &SUBBASE "#DFD9DF"
-    - &ACCENTBASE "#D4CED2"
+    - &ACCENTBASE "#DFD2D9"
 
     - &SUBACCENT "#435DA2"
 
