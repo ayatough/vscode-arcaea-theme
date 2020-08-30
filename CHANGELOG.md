@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.1.2] - 2020-08-30
+
+only add icon.
+
 ## [0.1.1] - 2020-05-16
 
 enhance below.
