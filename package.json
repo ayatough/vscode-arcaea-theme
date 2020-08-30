@@ -2,7 +2,8 @@
     "name": "arcaea-theme",
     "displayName": "Arcaea Theme",
     "description": "Arcaea theme for VS Code.",
-    "version": "0.1.1",
+    "icon": "asset/arcaea-theme-icon_128x128.png",
+    "version": "0.1.2",
 	"publisher": "ayatough",
 	"author": {
 		"name": "ayatough",
